@@ -14,27 +14,27 @@ function reducer(state, action) {
     case 'dolar':
       return {
         ...state,
-        dolar: action.dolar,
+        dolar: action,
       };
     case 'euro':
       return {
         ...state,
-        euro: action.euro,
+        euro: action,
       };
     case 'libra':
       return {
         ...state,
-        libra: action.libra,
+        libra: action,
       };
     case 'francoSuico':
       return {
         ...state,
-        francoSuico: action.francoSuico,
+        francoSuico: action,
       };
     case 'yuan':
       return {
         ...state,
-        yuan: action.yuan,
+        yuan: action,
       };
     default:
       return state;
