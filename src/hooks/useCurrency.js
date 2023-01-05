@@ -9,32 +9,32 @@ const initialState = {
 };
 
 function reducer(state, action) {
-  console.log('--Reducer action: ', action);
+  console.log('--Reducer action: ', action.payload);
   switch (action.type) {
     case 'dolar':
       return {
         ...state,
-        dolar: action,
+        dolar: action.payload,
       };
     case 'euro':
       return {
         ...state,
-        euro: action,
+        euro: action.payload,
       };
     case 'libra':
       return {
         ...state,
-        libra: action,
+        libra: action.payload,
       };
     case 'francoSuico':
       return {
         ...state,
-        francoSuico: action,
+        francoSuico: action.payload,
       };
     case 'yuan':
       return {
         ...state,
-        yuan: action,
+        yuan: action.payload,
       };
     default:
       return state;
