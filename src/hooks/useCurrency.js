@@ -9,7 +9,6 @@ const initialState = {
 };
 
 function reducer(state, action) {
-  console.log('--Reducer action: ', action.payload);
   switch (action.type) {
     case 'dolar':
       return {

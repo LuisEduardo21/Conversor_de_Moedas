@@ -22,7 +22,6 @@ import styles from './styles';
 
 export function Home() {
   const {state: currencies, dispatch} = useCurrency();
-  console.log('::: Home -> rendering');
 
   const [entrada, setEntrada] = useState('');
   const [saida, setSaida] = useState({
@@ -49,7 +48,6 @@ export function Home() {
       return data;
     },
     onSuccess: monetaryResponse => {
-      console.log('Axios: ', monetaryResponse);
       handlerMonetary(monetaryResponse);
     },
     onError: e => {
@@ -59,7 +57,6 @@ export function Home() {
   });
 
   const handlerMonetary = data => {
-    console.log('Monetary', data);
     dispatch({type: 'dolar', payload: data.USDBRL});
     dispatch({type: 'euro', payload: data.EURBRL});
     dispatch({type: 'libra', payload: data.GBPBRL});
